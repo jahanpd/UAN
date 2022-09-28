@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container">
+
+    <div class="row"> 
+        <div class="col"><h2 class='p-5'>Build Input Query:</h2></div>
+        <div class="col"><h2 class='p-5'>Outcomes:</h2></div>
+    </div>
+    <div class="row"> 
+        <div class="col">
+            <form class='m-5' id="feature-input" action="" method="post" novalidate>
+                <label for="feature_select">Select Features:</label>
+                <select name="features" id="features" class='form-control'>
+                    <option disabled selected value> -- select an option -- </option>
+                </select>
+            </form>
+        </div>
+        <div class="col">
+            <form class='m-5' id="feature-input" action="" method="post" novalidate>
+                <label for="feature_select">Select Outcomes:</label>
+                <select name="outcomes" id="outcomes" class='form-control'>
+                    <option disabled selected value> -- select an option -- </option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <form id="data-input" action="" method="POST" novalidate onsubmit="return validateForm();">
+        <div class="form-row"> 
+            <div class="col">
+                <div class='p-5' id="subforms-container">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class='p-5' id="subforms-container-outcomes">
+
+                </div>
+            </div>
+        </div>
+        <div class='row justify-content-md-center pb-3'>
+            <button type="submit" action="{{ url_for('input_attention') }}">Submit Data</button>
+        </div>
+    </form>
+</div>
+    
+
+{% endblock %}
+
+
+{% block start_javascript %}
+<script type="text/javascript">
+    var data_dict = [];
+    var included = [];
+
+    function add_patient(){
+        var patient = '{{ patient }}';
+        if (patient != 'empty'){
+            patient = JSON.parse('{{ patient | tojson}}');
+            for (key in patient){
+                feat_info = data_dict.find(f => f.colname == key);
+                console.log(feat_info);
+                if (feat_info.type != 'outcome'){
+                    addForm(feat_info.colno, parseInt(patient[key]), '#subforms-container', 'input')
+                } else if (feat_info.type == 'outcome') {
+                    addForm(feat_info.colno, parseInt(patient[key]), '#subforms-container-outcomes', 'outcome')
+                };
+            };
+        };       
+    };
+
+    function populate(data_dict){
+        console.log(data_dict)
+        // populate dropdown
+        let dropdown = $('#features');
+        dropdown.empty();
+        dropdown.append($('<option disabled selected value >-- select an option --</option>'));
+        
+        var sections = ["Demographics", "History", "Operative", "Physiology", "Postoperative"];
+
+        for (i in sections){
+            dropdown.append($('<optgroup></optgroup>').attr('label', sections[i]).attr('id', sections[i]));
+
+            data_dict.filter(d => d.type != "outcome" && d.level == 1 && d.class == sections[i]).forEach(function (element) {
+                $('#' + sections[i]).append($('<option></option>').attr('value', element.colno).text(element.name));
+            });
+        };
+
+        let dropdown_out = $('#outcomes');
+        dropdown_out.empty();
+        dropdown_out.append($('<option disabled selected value >-- select an option --</option>'));
+        data_dict.filter(d => d.type == "outcome").forEach(function (element) {
+            dropdown_out.append($('<option></option>').attr('value', element.colno).text(element.name));
+        });
+    };
+
+    function removeForm() {
+        var $removedForm = $(this).closest('div.input-group.mb-3');
+        feat_info = $removedForm.attr("data-dict");
+        feat_info = JSON.parse(feat_info);
+        included = included.filter(d => d != feat_info);
+        data_dict.push(feat_info);
+        $removedForm.remove();
+        populate(data_dict);
+    };
+
+    function addForm(feat, value, subform_label, type) {
+        // find info for feat and add custom form to subform container
+        if (type != 'outcome'){
+            feat_info = data_dict.find(f => f.colno == feat && f.type != 'outcome');
+        } else {
+            feat_info = data_dict.find(f => f.colno == feat && f.type == 'outcome');
+        }
+        console.log(feat_info)
+        // filter data dict for selected item and repopulate dropdown
+        data_dict = data_dict.filter(d => d != feat_info);
+        included.push(feat_info);
+        populate(data_dict);
+        if ( value == 0 ){ value = feat_info.values[0]};
+        new_id = feat_info.colname;
+        $(subform_label).append(
+            $('<div></div>').attr('id', new_id).attr('class','input-group mb-3').attr("data-dict",JSON.stringify(feat_info))
+        );
+        $('#' + new_id).append(
+            $('<div></div>').attr('class',"input-group-prepend").append(
+                $('<span></span>').text(feat_info.name).attr('class', "input-group-text")
+            )
+        );
+        if(feat_info.type == "number"){
+            $('#' + new_id).append(
+                $('<input required></input>').attr('type', 'number').attr('name', feat_info.colname)
+                .attr('min',feat_info.values[0]).attr('max',feat_info.values[1]).attr('class', 'form-control').val(value)
+            );
+            $('#' + new_id).append(
+            $('<div></div>').attr('class',"input-group-append").append(
+                $('<p></p>').text(feat_info.units).attr('class', "input-group-text")
+            ));
+        } else if (feat_info.type == "categorical") {
+            $('#' + new_id).append(
+                $('<select required></select>').attr('id', 'select' + feat_info.colno.toString() ).attr('class', 'form-control')
+                .attr('name', feat_info.colname)
+            );
+            feat_info.val_label.forEach(function (e, i) {
+                $('#' + 'select' + feat_info.colno.toString()).append($('<option></option>').attr('value', feat_info.values[i]).text(e));
+            });
+            if (feat_info.units != "NaN"){
+                $('#' + new_id).append(
+                $('<div></div>').attr('class',"input-group-append").append(
+                $('<p></p>').text(feat_info.units).attr('class', "input-group-text")
+            ));
+            };
+            $('#select' + feat_info.colno.toString()).val(value);
+        } else if (feat_info.type == "outcome"){
+            $('#' + new_id).append(
+                $('<input readonly></input>').attr('type', 'text').attr('name', feat_info.colname )
+                .attr('class', 'form-control').val(' ')
+            );
+        };
+        $('#' + new_id).append(
+            $('<div></div>').attr('class',"input-group-prepend").append(
+                $('<a></a>').text('remove').attr('class', "input-group-text").attr('href', "#")
+            )
+        );
+    };
+
+    // load json synchronously
+    $.ajax({
+        url: 'static/input_data.json',
+        async: false,
+        dataType: 'json',
+        success: function (response) {
+          response.forEach(d => data_dict.push(d))
+        }
+      });
+    $.ajax({
+    url: 'static/outcome_data.json',
+    async: false,
+    dataType: 'json',
+    success: function (response) {
+        response.forEach(d => data_dict.push(d))
+    }
+    });
+    
+    $(document).ready(function() {
+        populate(data_dict);
+        add_patient();
+
+        $(document).on('click', 'a.input-group-text', removeForm);
+
+        $('#features').change(() => {
+            feat = $( "#features option:selected" ).val();
+            feat_info = data_dict.find(f => f.colno == feat && f.type != 'outcome');
+            // find children for feature
+            addForm(feat, 0, '#subforms-container', 'input');
+            data_dict.filter( f => feat_info.child.includes(f.colname) ).forEach(function (child) {
+                addForm(child.colno, 0, '#subforms-container', 'input');
+            });
+        });
+        
+        $('#outcomes').change(() => {
+            feat = $( "#outcomes option:selected" ).val();
+            addForm(feat, 0, '#subforms-container-outcomes', 'outcome');
+        });
+
+    });
+
+</script>
+
+{% endblock %}

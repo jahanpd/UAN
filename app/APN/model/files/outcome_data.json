@@ -1,0 +1,241 @@
+[
+    {
+        "name": "Readmission to ICU",
+        "colname": "REICU",
+        "type": "outcome",
+        "colno": 0,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 1532,
+        "child": []
+    },
+    {
+        "name": "Reintubtion",
+        "colname": "REINT",
+        "type": "outcome",
+        "colno": 1,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 27256,
+        "child": []
+    },
+    {
+        "name": "Return to Theatre",
+        "colname": "RTT",
+        "type": "outcome",
+        "colno": 2,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 499,
+        "child": []
+    },
+    {
+        "name": "Postop Kidney Injury",
+        "colname": "NRF",
+        "type": "outcome",
+        "colno": 3,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 518,
+        "child": []
+    },
+    {
+        "name": "Postop dialysis",
+        "colname": "HAEMOFIL",
+        "type": "outcome",
+        "colno": 4,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 0,
+        "child": []
+    },
+    {
+        "name": "Postoperative Arrhythmia",
+        "colname": "NARRT",
+        "type": "outcome",
+        "colno": 5,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 500,
+        "child": []
+    },
+    {
+        "name": "Prolonged Ventilation",
+        "colname": "VENT_P",
+        "type": "outcome",
+        "colno": 6,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 493,
+        "child": []
+    },
+    {
+        "name": "Postop Pneumonia",
+        "colname": "PUPNU",
+        "type": "outcome",
+        "colno": 7,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 516,
+        "child": []
+    },
+    {
+        "name": "Deep Sternal Wound Infection",
+        "colname": "INFDS",
+        "type": "outcome",
+        "colno": 8,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 494,
+        "child": []
+    },
+    {
+        "name": "30d Mortality",
+        "colname": "MORT30",
+        "type": "outcome",
+        "colno": 9,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 2,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 325,
+        "child": []
+    },
+    {
+        "name": "30d Readmission",
+        "colname": "READ",
+        "type": "outcome",
+        "colno": 10,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 2,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 3324,
+        "child": []
+    }
+]

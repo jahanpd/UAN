@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+<div class="row p-3">
+    <div class="mx-auto p-3"> 
+        <table class="table"> 
+            <thead class="thead-dark">  
+                <tr>
+                    <th scope="col">Outcome</th>
+                    <th scope="col">Probability</th>
+                    <th scope="col">Lower Bound 95% CrI</th>
+                    <th scope="col">Upper Bound 95% CrI</th>
+                    <th scope="col">Baseline Risk</th>
+                    <th scope="col">Significance</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<div class="row p-3">
+    <div class="float-left"> 
+        <p class="btn" data-toggle="collapse" href="#collapseTable" role="button" aria-expanded="false" aria-controls="collapseTable">Learn more about this output</p><br>
+        <div class="collapse" id="collapseTable">
+            <p>This table shows the estimated probability of each outcome given the input data in the first column. The attention model is trained using a Bayesian variational inference framework, 
+            and the credible interval (CrI) of the posterior distribution is given in the next two columns. As a reference, the baseline risk distribution is given to compare
+            with the predicted probability. Significance is determined if the 95% CrI is outside the baseline risk distribution. </p>
+        </div>
+    </div>
+</div>
+<div class="row p-3">
+    <div class="mx-auto p-3"> 
+        <h3>Attention Heatmap</h3><br>
+        <p>Interactive visual display of which features the model is most attentive to, per outcome (each row). 
+            Features in blue contribute a less than baseline population risk, 
+            whereas red is a greater than baseline risk. The strength of the colour implies greater attention.</p>
+    </div>
+</div>
+<div class="row p-3">
+    <div class="mx-auto p-3"> 
+        {{ plot_div_hm|indent(4)|safe }}
+    </div>
+</div>
+<div class="row p-3">
+    <div class="float-left"> 
+        <p class="btn" data-toggle="collapse" href="#collapseAttn" role="button" aria-expanded="false" aria-controls="collapseAttn">Learn more about attention</p><br>
+        <div class="collapse" id="collapseAttn">
+            <p>A bayesian attention mechanism is a neural network architecture that maps the input data and outcomes of interest to queries (from outputs), keys (from inputs) and values (from inputs). 
+                The dot product of the queries (Q) and keys (K) form the concentration parameters of a Dirichlet distribution which models an attention distribution give our input data and outcome of interest. 
+                The dot product of the sampled attention the values produce the output of the attention module. The attention for each prediction is dependent on the feature, its values, and its outcome which allows for
+                unique weighting for each variable based on the characteristics of a specific patient (in contrast to a linear model such as logistic regression). 
+                There is, however, an ongoing linearity constraint in the dot product of the attention and values, retaining the external validation performance of linear models.<br>
+                <br> Mathematically, if our input vector is X and our outcomes of interest are Y, we can express the attention operation as:
+
+                $$Q = f(Y)$$
+                $$K = g(X)$$
+                $$V = h(X)$$
+                $$ attention \sim Dir( Q \boldsymbol{\cdot} K ) $$
+                $$ output = attention \boldsymbol{\cdot} V $$
+            </p>
+        </div>
+    </div>
+</div>
+<!-- 
+<div class="row p-3">
+    <div class="float-left"> 
+        <h3>Self-Attention Heatmap</h3><br>
+        <p>Visual display of features cross-correlation in the self-attention module. This plot does not have a direction, the darker the square, the more attention is paid to that feature.</p>
+    </div>
+</div>
+
+<div class="row p-3">
+    <div class="mx-auto p-3"> 
+        {{ plot_div_hm_x|indent(4)|safe }}
+    </div>
+</div>
+<div class="row p-3">
+    <div class="float-left"> 
+        <p class="btn" data-toggle="collapse" href="#collapseSelf" role="button" aria-expanded="false" aria-controls="collapseSelf">Learn more about self-attention</p><br>
+        <div class="collapse" id="collapseSelf">
+            <p>Before passing through the final attention module, the input data is passed through a bayesian self-attention module. The is the same as the attention module, however, 
+                the queries are also derived from the inputs.
+                <br>
+                <br> Mathematically:
+
+                $$Q = f(X)$$
+                $$K = g(X)$$
+                $$V = h(X)$$
+                $$ attention \sim Dir( Q \boldsymbol{\cdot} K ) $$
+                $$ output = attention \boldsymbol{\cdot} V $$
+            </p>
+        </div>
+    </div>
+</div> -->
+
+</div>
+
+
+{% endblock %}
+
+
+{% block start_javascript %}
+    {{ js_resources|indent(4)|safe }}
+    {{ css_resources|indent(4)|safe }}
+    {{ plot_script_hm|indent(4)|safe }}
+    {{ plot_script_hm_x|indent(4)|safe }}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endblock %}
+
+
+{% block end_javascript %}
+<script>
+    var data = JSON.parse('{{ output_json|safe }}');
+    let table = $('#table_body');
+    var keys = Object.keys(data)
+    var fixed = 3
+    for (i in keys){
+        console.log(keys[i] + data[keys[i]].baseline[1].toString());
+        table.append($('<tr></tr>').attr('id', i.toString()));
+        var row = $('#' + i.toString());
+        row.append($('<td></td>').text(keys[i]));
+        row.append($('<td></td>').text(data[keys[i]].prediction[1].toFixed(fixed).toString()));
+        row.append($('<td></td>').text(data[keys[i]].prediction[0].toFixed(fixed).toString()));
+        row.append($('<td></td>').text(data[keys[i]].prediction[2].toFixed(fixed).toString()));
+        row.append($('<td></td>').text(
+            data[keys[i]].baseline[1].toFixed(fixed).toString() + ' ('
+            + data[keys[i]].baseline[0].toFixed(fixed).toString() + ' - '
+            + data[keys[i]].baseline[2].toFixed(fixed).toString() + ')'
+        ));
+        if ( 
+            (( data[keys[i]].baseline[2] < data[keys[i]].prediction[0])  &
+            ( data[keys[i]].prediction[0] > data[keys[i]].baseline[2] )) |
+            (( data[keys[i]].baseline[0] > data[keys[i]].prediction[2])  &
+            ( data[keys[i]].prediction[2] < data[keys[i]].baseline[0] ))
+        ){
+            row.append($('<td></td>').text('*'));
+        } else {
+            row.append($('<td></td>').text(''));
+        };
+    };
+    console.log(data)
+</script>
+{% endblock %}

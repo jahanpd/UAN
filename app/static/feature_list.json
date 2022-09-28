@@ -1,0 +1,705 @@
+[
+ {
+  "name": "Age (years)",
+  "colname": "AGE",
+  "type": "number",
+  "values": [
+   0,
+   110
+  ],
+  "val_label": "continuous",
+  "units": "years",
+  "timing": 0,
+  "class": "demographic"
+ },
+ {
+  "name": "Sex",
+  "colname": "Sex",
+  "type": "binary",
+  "values": [
+   0,
+   1
+  ],
+  "val_label": [
+   "Female",
+   "Male"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "demographic"
+ },
+ {
+  "name": "Body Mass Index",
+  "colname": "BMI",
+  "type": "number",
+  "values": [
+   -1,
+   60
+  ],
+  "val_label": "continuous",
+  "units": "NaN",
+  "timing": 0,
+  "class": "demographic"
+ },
+ {
+  "name": "Indigenous Status",
+  "colname": "Race1",
+  "type": "binary",
+  "values": [
+   0,
+   1
+  ],
+  "val_label": [
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "demographic"
+ },
+ {
+  "name": "Insurance",
+  "colname": "Insur",
+  "type": "categorical",
+  "values": [
+   -1,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "val_label": [
+   "Unknown",
+   "Private",
+   "DVA",
+   "Medicare",
+   "Self Insured",
+   "Overseas",
+   "Other"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "demographic"
+ },
+ {
+  "name": "Previous Cardiac Procedure",
+  "colname": "POP",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "History of Arrhythmia",
+  "colname": "ARRT",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "History of Smoking",
+  "colname": "SMO_H",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "Current Smoker",
+  "colname": "SMO_C",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "History of Diabetes",
+  "colname": "DB",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "Diabetes Control",
+  "colname": "DB_CON",
+  "type": "binary",
+  "values": [
+   -1,
+   1,
+   2,
+   3,
+   4
+  ],
+  "val_label": [
+   "Unknown",
+   "None",
+   "Diet",
+   "Meds",
+   "Insulin"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "History of Hypercholesterolaemia",
+  "colname": "HCHOL",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "History of Hypertension",
+  "colname": "HYT",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "Lung Disease Severity",
+  "colname": "LD_T",
+  "type": "ordinal",
+  "values": [
+   -1,
+   2,
+   3,
+   4
+  ],
+  "val_label": [
+   "Unknown/None",
+   "Mild (chronic puffer use)",
+   "Moderate (chronic oral steroid)",
+   "Severe Room air p0 2 < 60 or room air pC0 2 > 50"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "Type of Cerebrovascular Disease",
+  "colname": "CBVD_T",
+  "type": "categorical",
+  "values": [
+   -1,
+   1,
+   2,
+   3,
+   4
+  ],
+  "val_label": [
+   "Unknown/None",
+   "Coma",
+   "CVA",
+   "RIND/TIA",
+   "Carotid Occlusive Disease"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "History of Peripheral Vascular Disease",
+  "colname": "PVD",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "History of Heart Failure",
+  "colname": "CHF",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "History of Dialysis",
+  "colname": "DIAL",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "Previous Renal Transplant",
+  "colname": "TRANS",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "Procedure Number",
+  "colname": "PROCNO",
+  "type": "number",
+  "values": [
+   -1,
+   10
+  ],
+  "val_label": "continuous",
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "Admitted with Heart Failure",
+  "colname": "CHF_C",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "physiology"
+ },
+ {
+  "name": "Ejection Fraction (%)",
+  "colname": "EF",
+  "type": "number",
+  "values": [
+   -1,
+   100
+  ],
+  "val_label": "continuous",
+  "units": "NaN",
+  "timing": 0,
+  "class": "physiology"
+ },
+ {
+  "name": "EF Estimate",
+  "colname": "EF_EST",
+  "type": "ordinal",
+  "values": [
+   -1,
+   1,
+   2,
+   3,
+   4
+  ],
+  "val_label": [
+   "Unknown",
+   ">60",
+   "46-60",
+   "30-45",
+   "<30"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "physiology"
+ },
+ {
+  "name": "Preoperative Shock",
+  "colname": "SHOCK",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "physiology"
+ },
+ {
+  "name": "Infective Endocarditis",
+  "colname": "IE_T",
+  "type": "categorical",
+  "values": [
+   -1,
+   1,
+   2
+  ],
+  "val_label": [
+   "Unknown/None",
+   "Active",
+   "Treated"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "history"
+ },
+ {
+  "name": "NYHA Class",
+  "colname": "NYHA",
+  "type": "ordinal",
+  "values": [
+   -1,
+   1,
+   2,
+   3,
+   4
+  ],
+  "val_label": [
+   "Unknown/None",
+   "Class 1",
+   "Class 2",
+   "Class 3",
+   "Class 4"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "physiology"
+ },
+ {
+  "name": "Operative Urgency",
+  "colname": "STAT",
+  "type": "ordinal",
+  "values": [
+   -1,
+   1,
+   2,
+   3,
+   4
+  ],
+  "val_label": [
+   "Unknown/None",
+   "Elective",
+   "Urgent",
+   "Emergent",
+   "Salvage"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "operative"
+ },
+ {
+  "name": "Type of Operation",
+  "colname": "TP",
+  "type": "categorical",
+  "values": [
+   -1,
+   1,
+   2,
+   3,
+   4
+  ],
+  "val_label": [
+   "Unknown/None",
+   "CABG alone",
+   "Isolated Valve",
+   "CABG+Valve",
+   "Other"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "operative"
+ },
+ {
+  "name": "Aortic Valve",
+  "colname": "AORTIC",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "operative"
+ },
+ {
+  "name": "Mitral Valve",
+  "colname": "MITRAL",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "operative"
+ },
+ {
+  "name": "Tricuspid Valve",
+  "colname": "TRICUS",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "operative"
+ },
+ {
+  "name": "Pulmonary Valve",
+  "colname": "PULM",
+  "type": "binary",
+  "values": [
+   -1,
+   0,
+   1
+  ],
+  "val_label": [
+   "Unknown",
+   "No",
+   "Yes"
+  ],
+  "units": "NaN",
+  "timing": 0,
+  "class": "operative"
+ },
+ {
+  "name": "Cross Clamp Time (mins)",
+  "colname": "CCT",
+  "type": "number",
+  "values": [
+   -1,
+   1000
+  ],
+  "val_label": "continuous",
+  "units": "mins",
+  "timing": 1,
+  "class": "operative"
+ },
+ {
+  "name": "Bypass Time (mins)",
+  "colname": "PERF",
+  "type": "number",
+  "values": [
+   -1,
+   1000
+  ],
+  "val_label": "continuous",
+  "units": "mins",
+  "timing": 1,
+  "class": "operative"
+ },
+ {
+  "name": "Preoperative Creatinine (micromol/L)",
+  "colname": "PRECR",
+  "type": "number",
+  "values": [
+   -1,
+   2000
+  ],
+  "val_label": "continuous",
+  "units": "micromol/L",
+  "timing": 0,
+  "class": "labs"
+ },
+ {
+  "name": "Estimated Filtration Rate (mL/min per 1.73m2)",
+  "colname": "eGFR",
+  "type": "number",
+  "values": [
+   -1,
+   90
+  ],
+  "val_label": "continuous",
+  "units": "mL/min per 1.73m2",
+  "timing": 0,
+  "class": "labs"
+ },
+ {
+  "name": "Preoperative Haemaglobin (g/L)",
+  "colname": "HG",
+  "type": "number",
+  "values": [
+   -1,
+   250
+  ],
+  "val_label": "continuous",
+  "units": "g/L",
+  "timing": 0,
+  "class": "labs"
+ },
+ {
+  "name": "Lowest Intraoperative Haemaglobin (g/L)",
+  "colname": "MINHT",
+  "type": "number",
+  "values": [
+   -1,
+   250
+  ],
+  "val_label": "continuous",
+  "units": "g/L",
+  "timing": 1,
+  "class": "labs"
+ },
+ {
+  "name": "Hours in ICU",
+  "colname": "ICU",
+  "type": "number",
+  "values": [
+   -1,
+   1000
+  ],
+  "val_label": "continuous",
+  "units": "hours",
+  "timing": 2,
+  "class": "postoperative"
+ },
+ {
+  "name": "Hours Ventilated",
+  "colname": "VENT",
+  "type": "number",
+  "values": [
+   -1,
+   1000
+  ],
+  "val_label": "continuous",
+  "units": "hours",
+  "timing": 2,
+  "class": "postoperative"
+ },
+ {
+  "name": "Drain output in first 4 hours (mL)",
+  "colname": "DRAIN_4",
+  "type": "number",
+  "values": [
+   -1,
+   4000
+  ],
+  "val_label": "continuous",
+  "units": "mL",
+  "timing": 2,
+  "class": "postoperative"
+ }
+]

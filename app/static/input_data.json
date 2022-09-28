@@ -1,0 +1,3001 @@
+[
+    {
+        "name": "Hours in ICU",
+        "colname": "ICU",
+        "type": "number",
+        "class":"Postoperative",
+        "colno": 0,
+        "values": [
+            0,
+            100000
+        ],
+        "val_label": "continuous",
+        "units": "hours",
+        "timing": 2,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 2169,
+        "child": []
+    },
+    {
+        "name": "Hours intubated postop",
+        "colname": "VENT",
+        "type": "number",
+        "class":"Postoperative",
+        "colno": 1,
+        "values": [
+            0,
+            100000
+        ],
+        "val_label": "continuous",
+        "units": "hours",
+        "timing": 2,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 3742,
+        "child": []
+    },
+    {
+        "name": "Type of Procedure",
+        "colname": "TP",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 2,
+        "values": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            "CABG alone",
+            "Isolated Valve",
+            "CABG+Valve",
+            "Other"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 228,
+        "child": [
+            "AOPROC",
+            "MIPROC",
+            "TRPROC",
+            "PUPROC",
+            "TRAUMA",
+            "TUMOUR",
+            "CT",
+            "LAA",
+            "AO",
+            "ITA",
+            "DANV",
+            "DAN",
+            "DAN_AC"
+        ]
+    },
+    {
+        "name": "Procedure number",
+        "colname": "PROCNO",
+        "type": "number",
+        "class":"Operative",
+        "colno": 3,
+        "values": [
+            0,
+            100000
+        ],
+        "val_label": "continuous",
+        "units": "prior procedures",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 1,
+        "child": []
+    },
+    {
+        "name": "Age",
+        "colname": "AGE",
+        "type": "number",
+        "class":"Demographics",
+        "colno": 4,
+        "values": [
+            0,
+            150
+        ],
+        "val_label": "continuous",
+        "units": "years",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 25,
+        "child": []
+    },
+    {
+        "name": "Sex",
+        "colname": "Sex",
+        "type": "categorical",
+        "class":"Demographics",
+        "colno": 5,
+        "values": [
+            1,
+            2
+        ],
+        "val_label": [
+            "Male",
+            "Female"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 0,
+        "child": []
+    },
+    {
+        "name": "Indigenous Australian",
+        "colname": "Race1",
+        "type": "categorical",
+        "class":"Demographics",
+        "colno": 6,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 1827,
+        "child": []
+    },
+    {
+        "name": "Insurance",
+        "colname": "Insur",
+        "type": "categorical",
+        "class":"Demographics",
+        "colno": 7,
+        "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "val_label": [
+            "Private",
+            "DVA",
+            "Medicare",
+            "Self Insured",
+            "Overseas",
+            "Other",
+            "7"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 2034,
+        "child": []
+    },
+    {
+        "name": "Smoking History",
+        "colname": "SMO_H",
+        "type": "categorical",
+        "class":"History",
+        "colno": 8,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 248,
+        "child": [
+            "SMO_C"
+        ]
+    },
+    {
+        "name": "Smoking Current",
+        "colname": "SMO_C",
+        "type": "categorical",
+        "class":"History",
+        "colno": 9,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "SMO_H",
+        "parent_val": "NaN",
+        "nan_count": 64281,
+        "child": []
+    },
+    {
+        "name": "History of Diabetes",
+        "colname": "DB",
+        "type": "categorical",
+        "class":"History",
+        "colno": 10,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 264,
+        "child": [
+            "DB_CON"
+        ]
+    },
+    {
+        "name": "Diabetes Control",
+        "colname": "DB_CON",
+        "type": "categorical",
+        "class":"History",
+        "colno": 11,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            "Unknown",
+            "None",
+            "Diet",
+            "Meds",
+            "Insulin"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "DB",
+        "parent_val": "1",
+        "nan_count": 108640,
+        "child": []
+    },
+    {
+        "name": "History of High Cholesterol",
+        "colname": "HCHOL",
+        "type": "categorical",
+        "class":"History",
+        "colno": 12,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 295,
+        "child": []
+    },
+    {
+        "name": "Preoperative Creatinine",
+        "colname": "PRECR",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 13,
+        "values": [
+            20,
+            2000
+        ],
+        "val_label": "continuous",
+        "units": "micromol/L",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 332,
+        "child": []
+    },
+    {
+        "name": "Preoperative Dialysis",
+        "colname": "DIAL",
+        "type": "categorical",
+        "class":"History",
+        "colno": 14,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 235,
+        "child": []
+    },
+    {
+        "name": "Prior Renal Transplant",
+        "colname": "TRANS",
+        "type": "categorical",
+        "class":"History",
+        "colno": 15,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 27220,
+        "child": []
+    },
+    {
+        "name": "Preoperative Haemaglobin",
+        "colname": "HG",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 16,
+        "values": [
+            40,
+            200
+        ],
+        "val_label": "continuous",
+        "units": "g/L",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 105385,
+        "child": []
+    },
+    {
+        "name": "History of Hypertension",
+        "colname": "HYT",
+        "type": "categorical",
+        "class":"History",
+        "colno": 17,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 276,
+        "child": []
+    },
+    {
+        "name": "History of Stroke/TIA",
+        "colname": "CBVD",
+        "type": "categorical",
+        "class":"History",
+        "colno": 18,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 272,
+        "child": [
+            "CBVD_T",
+            "CVA_W"
+        ]
+    },
+    {
+        "name": "Type of Cerebrovascular Disease",
+        "colname": "CBVD_T",
+        "type": "categorical",
+        "class":"History",
+        "colno": 19,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            "Unknown",
+            "Coma",
+            "CVA",
+            "RIND/TIA",
+            "Carotid Occlusive Disease"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "CBVD",
+        "parent_val": 1,
+        "nan_count": 137657,
+        "child": []
+    },
+    {
+        "name": "Timing of Stroke/TIA",
+        "colname": "CVA_W",
+        "type": "categorical",
+        "class":"History",
+        "colno": 20,
+        "values": [
+            -1,
+            1,
+            2
+        ],
+        "val_label": [
+            "Unknown",
+            "Recent",
+            "Remote"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "CBVD",
+        "parent_val": 1,
+        "nan_count": 145687,
+        "child": []
+    },
+    {
+        "name": "Carotid Stenosis",
+        "colname": "CART",
+        "type": "categorical",
+        "class":"History",
+        "colno": 21,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "None",
+            ">=50% Stenosis"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 105380,
+        "child": []
+    },
+    {
+        "name": "History of Peripheral Vascular Disease",
+        "colname": "PVD",
+        "type": "categorical",
+        "class":"History",
+        "colno": 22,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 277,
+        "child": []
+    },
+    {
+        "name": "History of Lung Disease",
+        "colname": "LD",
+        "type": "categorical",
+        "class":"History",
+        "colno": 23,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 259,
+        "child": [
+            "LD_T"
+        ]
+    },
+    {
+        "name": "Lung Disease Severity",
+        "colname": "LD_T",
+        "type": "categorical",
+        "class":"History",
+        "colno": 24,
+        "values": [
+            -1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            "Unknown",
+            "Mild (chronic puffer use)",
+            "Moderate (chronic oral steroid)",
+            "Severe Room air p0 2 < 60 or room air pC0 2 > 50"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "LD",
+        "parent_val": 1,
+        "nan_count": 132842,
+        "child": []
+    },
+    {
+        "name": "Infective Endocarditis",
+        "colname": "IE",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 25,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 275,
+        "child": [
+            "IE_T"
+        ]
+    },
+    {
+        "name": "Infective Endocarditis Type",
+        "colname": "IE_T",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 26,
+        "values": [
+            1,
+            2
+        ],
+        "val_label": [
+            "Active",
+            "Treated"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "IE",
+        "parent_val": 1,
+        "nan_count": 149448,
+        "child": []
+    },
+    {
+        "name": "Recent Immunosuppression (within 30 days)",
+        "colname": "IMSRX",
+        "type": "categorical",
+        "class":"History",
+        "colno": 27,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 276,
+        "child": []
+    },
+    {
+        "name": "Myocardial Infarction",
+        "colname": "MI",
+        "type": "categorical",
+        "class":"History",
+        "colno": 28,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 230,
+        "child": [
+            "MI_W",
+            "MI_T"
+        ]
+    },
+    {
+        "name": "Type of Myocardial Infarction",
+        "colname": "MI_T",
+        "type": "categorical",
+        "class":"History",
+        "colno": 29,
+        "values": [
+            -1,
+            1,
+            2
+        ],
+        "val_label": [
+            "Unknown",
+            "NSTEMI",
+            "STEMI"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "MI",
+        "parent_val": 1,
+        "nan_count": 111115,
+        "child": []
+    },
+    {
+        "name": "Timing of Myocardial Infarction",
+        "colname": "MI_W",
+        "type": "categorical",
+        "class":"History",
+        "colno": 30,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "val_label": [
+            "Unknown",
+            "T < 6hrs",
+            "6hrs < T < 24hrs",
+            "1 - 7 days",
+            "7 - 21 days",
+            "> 21 days"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "MI",
+        "parent_val": 1,
+        "nan_count": 99962,
+        "child": []
+    },
+    {
+        "name": "CCS Angina Class",
+        "colname": "CCS",
+        "type": "categorical",
+        "class":"History",
+        "colno": 31,
+        "values": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 807,
+        "child": [
+            "ANG_T"
+        ]
+    },
+    {
+        "name": "IV GTN on day of Surgery",
+        "colname": "ANGRXG",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 32,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 62555,
+        "child": []
+    },
+    {
+        "name": "IV Heparin <= 12hrs prior to surgery",
+        "colname": "ANGRXH",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 33,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 62481,
+        "child": []
+    },
+    {
+        "name": "Full Dose of Heparinoid <24hrs to surgery",
+        "colname": "ANGRXC",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 34,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 62481,
+        "child": []
+    },
+    {
+        "name": "Angina Type",
+        "colname": "ANG_T",
+        "type": "categorical",
+        "class":"History",
+        "colno": 35,
+        "values": [
+            1,
+            2
+        ],
+        "val_label": [
+            "Stable",
+            "Unstable"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "CCS",
+        "parent_val": "NaN",
+        "nan_count": 63551,
+        "child": []
+    },
+    {
+        "name": "History of Congestive Heart Failure",
+        "colname": "CHF",
+        "type": "categorical",
+        "class":"History",
+        "colno": 36,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 258,
+        "child": []
+    },
+    {
+        "name": "Heart Failure at Admission",
+        "colname": "CHF_C",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 37,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 119133,
+        "child": []
+    },
+    {
+        "name": "NYHA Classification",
+        "colname": "NYHA",
+        "type": "categorical",
+        "class":"History",
+        "colno": 38,
+        "values": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 4034,
+        "child": []
+    },
+    {
+        "name": "Preoperative Shock",
+        "colname": "SHOCK",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 39,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 251,
+        "child": []
+    },
+    {
+        "name": "Perioperative Resuscitation Required",
+        "colname": "RESUS",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 40,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 258,
+        "child": []
+    },
+    {
+        "name": "History of Arrythmia",
+        "colname": "ARRT",
+        "type": "categorical",
+        "class":"History",
+        "colno": 41,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 284,
+        "child": [
+            "ARRT_A",
+            "ARRT_V",
+            "ARRT_H"
+        ]
+    },
+    {
+        "name": "History of Atrial Arrhythmia",
+        "colname": "ARRT_A",
+        "type": "categorical",
+        "class":"History",
+        "colno": 42,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "ARRT",
+        "parent_val": 1,
+        "nan_count": 107597,
+        "child": [
+            "ARRT_AT"
+        ]
+    },
+    {
+        "name": "Type of Atrial Fibrillation",
+        "colname": "ARRT_AT",
+        "type": "categorical",
+        "class":"History",
+        "colno": 43,
+        "values": [
+            -1,
+            1,
+            3
+        ],
+        "val_label": [
+            "Unknown",
+            "Paroxysmal",
+            "Permanent"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "ARRT_A",
+        "parent_val": 1,
+        "nan_count": 135415,
+        "child": []
+    },
+    {
+        "name": "History of Heart Block",
+        "colname": "ARRT_H",
+        "type": "categorical",
+        "class":"History",
+        "colno": 44,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "ARRT",
+        "parent_val": 1,
+        "nan_count": 107834,
+        "child": []
+    },
+    {
+        "name": "History of Ventricular Arrythmia",
+        "colname": "ARRT_V",
+        "type": "categorical",
+        "class":"History",
+        "colno": 45,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "ARRT",
+        "parent_val": 1,
+        "nan_count": 107836,
+        "child": []
+    },
+    {
+        "name": "Pacemaker in situ",
+        "colname": "PACE",
+        "type": "categorical",
+        "class":"History",
+        "colno": 46,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 28377,
+        "child": []
+    },
+    {
+        "name": "Inotrope requirement preoperatively",
+        "colname": "MEDIN",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 47,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 259,
+        "child": []
+    },
+    {
+        "name": "Recent Anticoagulation",
+        "colname": "MEDAC",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 48,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 301,
+        "child": []
+    },
+    {
+        "name": "Steroid Therapy at time of Surgery ",
+        "colname": "MEDST",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 49,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 1337,
+        "child": []
+    },
+    {
+        "name": "Aspirin within 7 days of surgery",
+        "colname": "MED_ASP",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 50,
+        "values": [
+            -1,
+            0,
+            1,
+            9
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes",
+            "9"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 11170,
+        "child": []
+    },
+    {
+        "name": "Thienopyridine agent within 7 days of surgery",
+        "colname": "MED_CLOP",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 51,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 11178,
+        "child": []
+    },
+    {
+        "name": "Ticagrelor agent within 7 days of surgery",
+        "colname": "MED_TICA",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 52,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 105113,
+        "child": []
+    },
+    {
+        "name": "Previous Cardiac Procedure (Any)",
+        "colname": "POP",
+        "type": "categorical",
+        "class":"History",
+        "colno": 53,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 227,
+        "child": [
+            "PCS",
+            "PTCA",
+            "PTAVR"
+        ]
+    },
+    {
+        "name": "Previous Cardiac Surgery",
+        "colname": "PCS",
+        "type": "categorical",
+        "class":"History",
+        "colno": 54,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "POP",
+        "parent_val": 1,
+        "nan_count": 143872,
+        "child": []
+    },
+    {
+        "name": "Previous TAVR",
+        "colname": "PTAVR",
+        "type": "categorical",
+        "class":"History",
+        "colno": 55,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "POP",
+        "parent_val": 1,
+        "nan_count": 147048,
+        "child": []
+    },
+    {
+        "name": "Previous PTCA/Stent",
+        "colname": "PTCA",
+        "type": "categorical",
+        "class":"History",
+        "colno": 56,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "POP",
+        "parent_val": 1,
+        "nan_count": 123457,
+        "child": [
+            "PTCA_ADM"
+        ]
+    },
+    {
+        "name": "Timing of PTCA/Stent",
+        "colname": "PTCA_ADM",
+        "type": "categorical",
+        "class":"History",
+        "colno": 57,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "Remote",
+            "This Admission"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "PTCA",
+        "parent_val": 1,
+        "nan_count": 137413,
+        "child": [
+            "PTCA_H"
+        ]
+    },
+    {
+        "name": "Interval from Stent to Surgery",
+        "colname": "PTCA_H",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 58,
+        "values": [
+            0,
+            1000
+        ],
+        "val_label": "continuous",
+        "units": "hours",
+        "timing": 1,
+        "level": 2,
+        "parent": "PTCA_ADM",
+        "parent_val": 1,
+        "nan_count": 152421,
+        "child": []
+    },
+    {
+        "name": "Cardiac Catherization (Angiogram) Available",
+        "colname": "CATH",
+        "type": "categorical",
+        "class":"History",
+        "colno": 59,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 367,
+        "child": []
+    },
+    {
+        "name": "Ejection Fraction Percentage",
+        "colname": "EF",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 60,
+        "values": [
+            0,
+            100
+        ],
+        "val_label": "continuous",
+        "units": "%",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 78296,
+        "child": []
+    },
+    {
+        "name": "Ejection Fraction Estimate",
+        "colname": "EF_EST",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 61,
+        "values": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            ">60",
+            "46-60",
+            "30-45",
+            "<30"
+        ],
+        "units": "%",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 3858,
+        "child": []
+    },
+    {
+        "name": "Known Left Main Disease >50%",
+        "colname": "LMD",
+        "type": "categorical",
+        "class":"History",
+        "colno": 62,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 679,
+        "child": []
+    },
+    {
+        "name": "Number of diseased vessel systems",
+        "colname": "DISVES",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 63,
+        "values": [
+            -1,
+            0,
+            1,
+            2,
+            3
+        ],
+        "val_label": [
+            "Unknown",
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 766,
+        "child": []
+    },
+    {
+        "name": "BMI",
+        "colname": "BMI",
+        "type": "number",
+        "class":"Demographics",
+        "colno": 64,
+        "values": [
+            0,
+            1000
+        ],
+        "val_label": "continuous",
+        "units": "ratio",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 245,
+        "child": []
+    },
+    {
+        "name": "eGFR",
+        "colname": "eGFR",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 65,
+        "values": [
+            0,
+            1000
+        ],
+        "val_label": "continuous",
+        "units": "mL/min per 1.73m2",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 700,
+        "child": []
+    },
+    {
+        "name": "Level of primary operator",
+        "colname": "PROC",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 66,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "val_label": [
+            "Unknown",
+            "Consultant",
+            "Senior Registrar",
+            "Trainee",
+            "Overseas Fellow",
+            "Oversight"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 1180,
+        "child": []
+    },
+    {
+        "name": "Operative Urgency",
+        "colname": "STAT",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 67,
+        "values": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            "Elective",
+            "Urgent",
+            "Emergent",
+            "Salvage"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 101,
+        "child": []
+    },
+    {
+        "name": "Direct transfter from Cath Lab to OT",
+        "colname": "DTCATH",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 68,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 539,
+        "child": []
+    },
+    {
+        "name": "Operation for Cardiac Trauma",
+        "colname": "TRAUMA",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 69,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            4
+        ],
+        "nan_count": 113253,
+        "child": []
+    },
+    {
+        "name": "Operation for Cardiac Tumour",
+        "colname": "TUMOUR",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 70,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            4
+        ],
+        "nan_count": 113252,
+        "child": []
+    },
+    {
+        "name": "Cardiac Transplant",
+        "colname": "CT",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 71,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            4
+        ],
+        "nan_count": 113277,
+        "child": []
+    },
+    {
+        "name": "Left Atrial Appendage Closure",
+        "colname": "LAA",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 72,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            4
+        ],
+        "nan_count": 146342,
+        "child": []
+    },
+    {
+        "name": "Aortic Operation",
+        "colname": "AO",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 73,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            4
+        ],
+        "nan_count": 910,
+        "child": [
+            "AOP"
+        ]
+    },
+    {
+        "name": "Aortic Pathology",
+        "colname": "AOP",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 74,
+        "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "val_label": [
+            "Aortic Aneurysm",
+            "Aortic Dissection",
+            "Traumatic Dissection",
+            "Calcification",
+            "Other"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "AO",
+        "parent_val": 1,
+        "nan_count": 149606,
+        "child": []
+    },
+    {
+        "name": "Minimally Invasive Approach Attempted",
+        "colname": "MIN",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 75,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 416,
+        "child": []
+    },
+    {
+        "name": "Cardiopulmonary Bypass Used",
+        "colname": "CPB",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 76,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 101,
+        "child": [
+            "CCT",
+            "PERF"
+        ]
+    },
+    {
+        "name": "Cumulative Cross Clamp Time",
+        "colname": "CCT",
+        "type": "number",
+        "class":"Operative",
+        "colno": 77,
+        "values": [
+            0,
+            1000
+        ],
+        "val_label": "continuous",
+        "units": "mins",
+        "timing": 1,
+        "level": 2,
+        "parent": "CPB",
+        "parent_val": 1,
+        "nan_count": 8049,
+        "child": []
+    },
+    {
+        "name": "Bypass Time",
+        "colname": "PERF",
+        "type": "number",
+        "class":"Operative",
+        "colno": 78,
+        "values": [
+            0,
+            1000
+        ],
+        "val_label": "continuous",
+        "units": "mins",
+        "timing": 1,
+        "level": 2,
+        "parent": "CPB",
+        "parent_val": 1,
+        "nan_count": 8016,
+        "child": []
+    },
+    {
+        "name": "Lowest Intraoperative Haemaglobin",
+        "colname": "MINHT",
+        "type": "number",
+        "class":"Operative",
+        "colno": 79,
+        "values": [
+            40,
+            200
+        ],
+        "val_label": "continuous",
+        "units": "g/L",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 110636,
+        "child": []
+    },
+    {
+        "name": "IABP used at any time",
+        "colname": "IABP",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 80,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 232,
+        "child": [
+            "IABP_W",
+            "IABP_I"
+        ]
+    },
+    {
+        "name": "Timing of IABP",
+        "colname": "IABP_W",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 81,
+        "values": [
+            1,
+            2,
+            3
+        ],
+        "val_label": [
+            "Preoperative",
+            "Intraoperative",
+            "Postoperative"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "IABP",
+        "parent_val": "NaN",
+        "nan_count": 147483,
+        "child": []
+    },
+    {
+        "name": "Indication of IABP",
+        "colname": "IABP_I",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 82,
+        "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "val_label": [
+            "Haemodynamic Instability",
+            "PTCA/PCI Support",
+            "Unstable Angina",
+            "CPB wean",
+            "Prophylactic"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "IABP",
+        "parent_val": 1,
+        "nan_count": 147498,
+        "child": []
+    },
+    {
+        "name": "ECMO used at any time",
+        "colname": "ECMO",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 83,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 105128,
+        "child": [
+            "ECMO_W",
+            "ECMO_I"
+        ]
+    },
+    {
+        "name": "Timing of ECMO",
+        "colname": "ECMO_W",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 84,
+        "values": [
+            1,
+            2,
+            3
+        ],
+        "val_label": [
+            "Preoperative",
+            "Intraoperative",
+            "Postoperative"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "ECMO",
+        "parent_val": 1,
+        "nan_count": 153529,
+        "child": []
+    },
+    {
+        "name": "Indication of ECMO",
+        "colname": "ECMO_I",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 85,
+        "values": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            "Cardiac Failure",
+            "Respiratory Failure",
+            "Hypothermia",
+            "Rescue/Salvage"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "ECMO",
+        "parent_val": 1,
+        "nan_count": 153529,
+        "child": []
+    },
+    {
+        "name": "VAD used at any time",
+        "colname": "VAD",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 86,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 104929,
+        "child": [
+            "VAD_W",
+            "VAD_I"
+        ]
+    },
+    {
+        "name": "Timing of VAD",
+        "colname": "VAD_W",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 87,
+        "values": [
+            1,
+            2,
+            3
+        ],
+        "val_label": [
+            "Preoperative",
+            "Intraoperative",
+            "Postoperative"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "VAD",
+        "parent_val": 1,
+        "nan_count": 153680,
+        "child": []
+    },
+    {
+        "name": "Indication of VAD",
+        "colname": "VAD_I",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 88,
+        "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "val_label": [
+            "Bridge to Transplant",
+            "Bridge to Recovery",
+            "Destination",
+            "Postcardiotomy Ventricular Failure",
+            "Device Malfunction"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "VAD",
+        "parent_val": 1,
+        "nan_count": 153680,
+        "child": []
+    },
+    {
+        "name": "Intraoperative TOE used",
+        "colname": "IOTOE",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 89,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 11833,
+        "child": []
+    },
+    {
+        "name": "Intraoperative Antifibrinolytic use",
+        "colname": "ANTIFIB",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 90,
+        "values": [
+            -1,
+            0,
+            1,
+            9
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes",
+            "ATACAS"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 26309,
+        "child": [
+            "ANTIFIB_T"
+        ]
+    },
+    {
+        "name": "Type of Intraoperative Antifibrinolytic",
+        "colname": "ANTIFIB_T",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 91,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4
+        ],
+        "val_label": [
+            "Unknown",
+            "Trasylol",
+            "Tranexamic Acid",
+            "Other",
+            "Aminocaproic Acid"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 2,
+        "parent": "ANTIFIB",
+        "parent_val": 1,
+        "nan_count": 51963,
+        "child": []
+    },
+    {
+        "name": "Intraoperative Decision to Graft Coronary Artery",
+        "colname": "IDGCA",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 92,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 70758,
+        "child": []
+    },
+    {
+        "name": "Internal Thoracic used for Graft",
+        "colname": "ITA",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 93,
+        "values": [
+            -1,
+            0,
+            1
+        ],
+        "val_label": [
+            "Unknown",
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            1,
+            3
+        ],
+        "nan_count": 50263,
+        "child": []
+    },
+    {
+        "name": "Number of arterial anastomoses",
+        "colname": "DAN_AC",
+        "type": "number",
+        "class":"Operative",
+        "colno": 94,
+        "values": [
+            0,
+            20
+        ],
+        "val_label": "continuous",
+        "units": "joins",
+        "timing": 1,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            1,
+            3
+        ],
+        "nan_count": 50295,
+        "child": []
+    },
+    {
+        "name": "Number of venous anastomoses",
+        "colname": "DANV",
+        "type": "number",
+        "class":"Operative",
+        "colno": 95,
+        "values": [
+            0,
+            20
+        ],
+        "val_label": "continuous",
+        "units": "joins",
+        "timing": 1,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            1,
+            3
+        ],
+        "nan_count": 50301,
+        "child": []
+    },
+    {
+        "name": "Total numer of anastomoses",
+        "colname": "DAN",
+        "type": "number",
+        "class":"Operative",
+        "colno": 96,
+        "values": [
+            0,
+            20
+        ],
+        "val_label": "continuous",
+        "units": "joins",
+        "timing": 1,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            1,
+            3
+        ],
+        "nan_count": 50247,
+        "child": []
+    },
+    {
+        "name": "Aortic Valve Procedure",
+        "colname": "AOPROC",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 97,
+        "values": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            23,
+            24,
+            26,
+            99
+        ],
+        "val_label": [
+            "No",
+            "Replacement",
+            "4",
+            "5",
+            "Root Recon with Valve",
+            "Root valve sparing",
+            "Resuspension of valve",
+            "Resection with sub-aortic stenosis",
+            "Valvotomy with annuloplasty ring",
+            "Repair of paravalular leak",
+            "14",
+            "Ross Procedure",
+            "Inspection only",
+            "Decalcification",
+            "Subcommisural annuloplasty",
+            "19",
+            "Thrombus removal",
+            "TAVR",
+            "Aortic Valvuloplasty",
+            "Aortic Valvuloplasty",
+            "Tumour Tissue Removal",
+            "99"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            2,
+            3
+        ],
+        "nan_count": 94034,
+        "child": [
+            "AOPATH"
+        ]
+    },
+    {
+        "name": "Aortic Valve Pathology",
+        "colname": "AOPATH",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 98,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            99
+        ],
+        "val_label": [
+            "Unknown",
+            "Rheumatic",
+            "Congenital",
+            "Ischaemic",
+            "Idiopathic Calcific",
+            "Myxomatous Degen",
+            "Failed Prior Repair",
+            "Prosthetic Valve Failure",
+            "Periprosthetic Leak",
+            "Prosthetic Valve Thrombosis",
+            "Active Infection",
+            "Previous Infection",
+            "Marfans",
+            "Annuloaortic Ectasia",
+            "Other degen disease",
+            "Dissection",
+            "Tumour",
+            "Trauma",
+            "Iatrogenic",
+            "19",
+            "20",
+            "Failed TAVR",
+            "99"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "AOPROC",
+        "parent_val": "NaN",
+        "nan_count": 111740,
+        "child": []
+    },
+    {
+        "name": "Mitral Valve Procedure",
+        "colname": "MIPROC",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 99,
+        "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            20,
+            25,
+            26,
+            27,
+            28
+        ],
+        "val_label": [
+            "No",
+            "Annuloplasty Only",
+            "Replacement",
+            "Repair or Recon with Annuloplasty",
+            "Repair or recon without plasty",
+            "Commisurotomy with plasty ring",
+            "Commisurotomy without ring",
+            "Repair of Paravalvular Leak",
+            "Inspection only",
+            "Decalcification",
+            "18",
+            "Thrombus removal",
+            "Alfieri Suture",
+            "Tumour tissue removal",
+            "Insertion of Mitraclip device",
+            "TMVR"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            2,
+            3
+        ],
+        "nan_count": 94116,
+        "child": [
+            "MIPATH"
+        ]
+    },
+    {
+        "name": "Mitral Valve Pathology",
+        "colname": "MIPATH",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 100,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            23,
+            99
+        ],
+        "val_label": [
+            "Unknown",
+            "Rheumatic",
+            "Congenital",
+            "Ischaemic",
+            "Idiopathic Calcific",
+            "Myxomatous Degen",
+            "Failed Prior Repair",
+            "Prosthetic Valve Failure",
+            "Periprosthetic Leak",
+            "Prosthetic Valve Thrombosis",
+            "Active Infection",
+            "Previous Infection",
+            "Marfans",
+            "13",
+            "Other degen disease",
+            "15",
+            "Tumour",
+            "Trauma",
+            "Iatrogenic",
+            "Functional mitral valve",
+            "20",
+            "22",
+            "Failed TMVR",
+            "99"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "MIPROC",
+        "parent_val": "NaN",
+        "nan_count": 127594,
+        "child": []
+    },
+    {
+        "name": "Tricuspid Valve Procedure",
+        "colname": "TRPROC",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 101,
+        "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10,
+            11,
+            12,
+            13,
+            16,
+            20,
+            26
+        ],
+        "val_label": [
+            "No",
+            "Annuloplasty only",
+            "Replacement",
+            "Repair or Recon with Annuloplasty",
+            "Repair or recon without plasty",
+            "Commisurotomy with plasty ring",
+            "Commisurotomy without ring",
+            "Repair of Paravalvular Leak",
+            "Valvectomy",
+            "Inspection only",
+            "Thrombus removal",
+            "Tumour tissue removal"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            2,
+            3
+        ],
+        "nan_count": 94181,
+        "child": [
+            "TRPATH"
+        ]
+    },
+    {
+        "name": "Tricuspid Valve Pathology",
+        "colname": "TRPATH",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 102,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            99
+        ],
+        "val_label": [
+            "Unknown",
+            "Rheumatic",
+            "Congenital",
+            "3",
+            "4",
+            "Myxomatous Degen",
+            "Failed Prior Repair",
+            "Prosthetic Valve Repair",
+            "Periprosthetic Valve Leak",
+            "Periprosthetic Valve Thrombosis",
+            "Active infection",
+            "Previous infection",
+            "Marfans",
+            "13",
+            "Other Degen Disease",
+            "15",
+            "Tumour",
+            "Trauma",
+            "Iatrogenic",
+            "19",
+            "Functional Tricuspid Valve",
+            "Carcinoid Syndrome",
+            "Other"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TRPROC",
+        "parent_val": "NaN",
+        "nan_count": 142931,
+        "child": []
+    },
+    {
+        "name": "Pulmonary Valve Procedure",
+        "colname": "PUPROC",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 103,
+        "values": [
+            1,
+            3,
+            5,
+            11,
+            12,
+            16,
+            26,
+            29
+        ],
+        "val_label": [
+            "No",
+            "Replacement",
+            "Valvotomy with annuloplasty ring",
+            "Valvotomy without annuloplasty ring",
+            "Repair paravalvular leak",
+            "Inspection only",
+            "Tumour tissue removal",
+            "Replacement as part of Ross Procedure"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "TP",
+        "parent_val": [
+            2,
+            3
+        ],
+        "nan_count": 94213,
+        "child": [
+            "PUPATH"
+        ]
+    },
+    {
+        "name": "Pulmonary Valve Pathology",
+        "colname": "PUPATH",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 104,
+        "values": [
+            -1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            19,
+            99
+        ],
+        "val_label": [
+            "Unknown",
+            "Rheumatic",
+            "Congenital",
+            "3",
+            "4",
+            "Myxomatous Degen",
+            "Failed Prior Repair",
+            "Prosthetic Valve Failure",
+            "Prosthetic Valve Thrombosis",
+            "Active Infection",
+            "Previous Infection",
+            "12",
+            "Other degen disease",
+            "Tumour",
+            "Iatrogenic",
+            "19",
+            "Other"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 2,
+        "parent": "PUPROC",
+        "parent_val": "NaN",
+        "nan_count": 151057,
+        "child": []
+    },
+    {
+        "name": "Porcelain Aorta",
+        "colname": "AOPLN",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 105,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 0,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 153008,
+        "child": []
+    },
+    {
+        "name": "Allogenic RBC transfused intra-op or postop",
+        "colname": "RBC",
+        "type": "categorical",
+        "class":"Operative",
+        "colno": 106,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1.5,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 257,
+        "child": [
+            "RBCUnit"
+        ]
+    },
+    {
+        "name": "Number of RBC units transfused",
+        "colname": "RBCUnit",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 107,
+        "values": [
+            0,
+            100
+        ],
+        "val_label": "continuous",
+        "units": "units",
+        "timing": 1.5,
+        "level": 2,
+        "parent": "RBC",
+        "parent_val": 1,
+        "nan_count": 100534,
+        "child": []
+    },
+    {
+        "name": "FFP/Platelets/Novo7/Cryo transfused intra-op or postop",
+        "colname": "NRBC",
+        "type": "categorical",
+        "class":"Physiology",
+        "colno": 108,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 1.5,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 273,
+        "child": [
+            "PlateUnit",
+            "NovoUnit",
+            "CryoUnit",
+            "FFPUnit"
+        ]
+    },
+    {
+        "name": "Number of Platelets units transfused",
+        "colname": "PlateUnit",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 109,
+        "values": [
+            0,
+            100
+        ],
+        "val_label": "continuous",
+        "units": "units",
+        "timing": 1.5,
+        "level": 2,
+        "parent": "NRBC",
+        "parent_val": 1,
+        "nan_count": 110987,
+        "child": []
+    },
+    {
+        "name": "Novo7 transfused",
+        "colname": "NovoUnit",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 110,
+        "values": [
+            0,
+            1000
+        ],
+        "val_label": "continuous",
+        "units": "mg",
+        "timing": 1.5,
+        "level": 2,
+        "parent": "NRBC",
+        "parent_val": 1,
+        "nan_count": 111453,
+        "child": []
+    },
+    {
+        "name": "Cryoprecipitate transfused",
+        "colname": "CryoUnit",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 111,
+        "values": [
+            0,
+            1000
+        ],
+        "val_label": "continuous",
+        "units": "units",
+        "timing": 1.5,
+        "level": 2,
+        "parent": "NRBC",
+        "parent_val": 1,
+        "nan_count": 111040,
+        "child": []
+    },
+    {
+        "name": "FFP transfused",
+        "colname": "FFPUnit",
+        "type": "number",
+        "class":"Physiology",
+        "colno": 112,
+        "values": [
+            0,
+            1000
+        ],
+        "val_label": "continuous",
+        "units": "units",
+        "timing": 1.5,
+        "level": 2,
+        "parent": "NRBC",
+        "parent_val": 1,
+        "nan_count": 111850,
+        "child": []
+    },
+    {
+        "name": "ICC drain output first 4 hrs",
+        "colname": "DRAIN_4",
+        "type": "number",
+        "class":"Postoperative",
+        "colno": 113,
+        "values": [
+            0,
+            10000
+        ],
+        "val_label": "continuous",
+        "units": "mLs",
+        "timing": 1.5,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 12704,
+        "child": []
+    },
+    {
+        "name": "Prolonged Intubation >24hrs",
+        "colname": "PINT",
+        "type": "categorical",
+        "class":"Postoperative",
+        "colno": 114,
+        "values": [
+            0,
+            1
+        ],
+        "val_label": [
+            "No",
+            "Yes"
+        ],
+        "units": "NaN",
+        "timing": 2,
+        "level": 1,
+        "parent": "NaN",
+        "parent_val": "NaN",
+        "nan_count": 30674,
+        "child": []
+    }
+]
